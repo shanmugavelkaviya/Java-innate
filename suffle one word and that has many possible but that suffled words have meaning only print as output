@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+
+    static Set<String> result = new HashSet<>();
+
+    static void permute(String str, String ans, Set<String> dict) {
+        if (str.length() == 0) {
+            if (dict.contains(ans)) {
+                result.add(ans);
+            }
+            return;
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            String rest = str.substring(0, i) + str.substring(i + 1);
+            permute(rest, ans + ch, dict);
+        }
+    }
+
+    public static void main(String[] args) {
+        String word = "care";
+
+        Set<String> dictionary = new HashSet<>(
+            Arrays.asList("care", "race", "acre")
+        );
+
+        permute(word, "", dictionary);
+
+        System.out.println("Meaningful words:");
+        for (String s : result) {
+            System.out.println(s);
+        }
+    }
+}
