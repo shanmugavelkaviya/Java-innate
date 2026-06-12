@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class LoginSystem {
+    public static void main(String[] args) {
+        final String CORRECT_USERNAME = "admin";
+        final String CORRECT_PASSWORD = "password123";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Username: ");
+        String inputUsername = scanner.nextLine();
+        System.out.print("Enter Password: ");
+        String inputPassword = scanner.nextLine();
+        if (inputUsername.equals(CORRECT_USERNAME) && inputPassword.equals(CORRECT_PASSWORD)) {
+            System.out.println("welcome to home page");
+        } else {
+            System.out.println("invalid input");
+        }
+
+        scanner.close();
+    }
+}
