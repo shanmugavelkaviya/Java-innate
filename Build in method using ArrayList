@@ -1,0 +1,222 @@
+//clear()
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    cars.clear();
+    System.out.println(cars);
+  } 
+}
+// clone()
+
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    
+    ArrayList cars2 = (ArrayList)cars.clone();
+    cars2.set(0, "Toyota");
+    
+    System.out.println(cars);
+    System.out.println(cars2);
+  }
+}
+
+//contains()
+
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars.contains("BMW"));
+    System.out.println(cars.contains("Toyota"));
+  }
+}
+
+//addAll()
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    ArrayList<String> brands = new ArrayList<String>();
+    brands.add("Microsoft");
+    brands.add("W3Schools");
+    brands.add("Apple");
+    
+    brands.addAll(cars);
+    
+    System.out.println(brands);
+  }
+}
+//ensureCapacity()
+
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    list.ensureCapacity(15);
+    for (int i = 1; i <= 15; i++) {
+      list.add(i);
+    }
+    System.out.println(list);
+  }
+}
+//forEach()
+
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(5);
+    numbers.add(9);
+    numbers.add(8);
+    numbers.add(1);
+    numbers.forEach( (n) -> { System.out.println(n); } );
+  }
+}
+
+//Iterator()
+
+import java.util.ArrayList;
+import java.util.Iterator;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    Iterator<String> it = cars.iterator();
+    while(it.hasNext()) {
+      System.out.println(it.next());
+    }
+  }
+}
+// lastIndexOf()
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("Ford");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars.indexOf("Ford"));
+    System.out.println(cars.lastIndexOf("Ford"));
+  }
+}
+//remove()
+
+import java.util.ArrayList;
+
+public class Main { 
+  public static void main(String[] args) { 
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    cars.remove(0);
+    System.out.println(cars);
+  } 
+}
+
+//removeall()
+
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    cars.add("Toyota");
+    cars.removeAll(cars);
+    System.out.println(cars);
+  }
+}
+
+//removeIf()
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(5);
+    numbers.add(9);
+    numbers.add(8);
+    numbers.add(6);
+    numbers.add(1);
+    numbers.removeIf( n -> n % 2 == 0 );
+    System.out.println(numbers);
+  }
+}
+
+// size() 
+
+import java.util.ArrayList;
+
+public class Main { 
+  public static void main(String[] args) { 
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars.size());
+  } 
+}
+
+//retainAll()
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    cars.add("Toyota");
+    
+    ArrayList<String> valid = new ArrayList<String>();
+    valid.add("Volvo");
+    valid.add("Ford");
+    valid.add("Mazda");
+    
+    cars.retainAll(valid);
+    
+    System.out.println(cars);
+  }
+}
+
+
+
+
+
+
+
