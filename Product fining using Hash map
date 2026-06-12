@@ -1,0 +1,21 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, String> amazon = new HashMap<>();
+        HashMap<String, String> flipkart = new HashMap<>();
+
+        amazon.put("iphone", "Rs. 70,000 | Available");
+        amazon.put("laptop", "Rs. 55,000 | Out of Stock");
+        flipkart.put("iphone", "Rs. 68,000 | Available");
+        flipkart.put("laptop", "Rs. 53,000 | Available");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter product name: ");
+        String query = scanner.nextLine().toLowerCase().trim();
+        System.out.println("\nAmazon: " + amazon.getOrDefault(query, "Not Found"));
+        System.out.println("Flipkart: " + flipkart.getOrDefault(query, "Not Found"));
+        scanner.close();
+    }
+}
